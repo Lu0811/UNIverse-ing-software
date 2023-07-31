@@ -1,0 +1,21 @@
+import mongoose from "mongoose";
+
+const authTokenSchema = new mongoose.Schema(
+  {
+    token: {
+      type: String,
+      required: true,
+    },
+    userId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
+    // Puedes agregar más campos relacionados con la gestión de tokens aquí
+  },
+  { timestamps: true }
+);
+
+const AuthToken = mongoose.model("AuthToken", authTokenSchema);
+
+export default AuthToken;
