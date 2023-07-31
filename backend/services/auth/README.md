@@ -155,7 +155,7 @@ export default AuthToken;
 ```
 
 # Laboratorio 10: Codificación Legible (Clean Code)
-##Consistent Indentation (Indentación Coherente): 
+##_Consistent Indentation (Indentación Coherente)_
 La indentación consistente es una práctica esencial para mejorar la legibilidad del código. En el código presentado, podemos observar que cada nivel de indentación está compuesto por 2 espacios, lo cual es una elección común en la comunidad de desarrollo de JavaScript. Además, el código dentro de bloques de funciones, como en la función registerUser y loginUser, está correctamente indentado para reflejar la estructura jerárquica y mejorar la comprensión del código.
 
 - auth.controller.js
@@ -167,7 +167,7 @@ const hashPassword = async (password) => {
 
 ```
 
-##Comment and Documentation (Comentarios y Documentación): 
+##_Comment and Documentation (Comentarios y Documentación)_
 El código está bien documentado con comentarios descriptivos. Cada función tiene comentarios que explican su propósito y su comportamiento. Por ejemplo, la función registerUser tiene un comentario que indica su objetivo, que es registrar un nuevo usuario en la base de datos. También se mencionan los parámetros y el valor de retorno, lo que facilita la comprensión de cómo utilizar la función. La presencia de comentarios y documentación mejora la legibilidad del código y facilita la colaboración entre desarrolladores, ya que otros miembros del equipo pueden entender rápidamente el propósito y el funcionamiento de cada función.
 
 - auth.controller.js
@@ -185,7 +185,7 @@ const hashPassword = async (password) => {
 
 ```
 
-##Code Grouping (Agrupación de Código): 
+##_Code Grouping (Agrupación de Código)_
 El código está agrupado de manera coherente. Se han definido funciones auxiliares como hashPassword y comparePasswords, que se utilizan para implementar la funcionalidad de hashear y comparar contraseñas. Estas funciones se han colocado en la parte superior del archivo antes de las funciones principales que las utilizan. Además, todas las funciones relacionadas con la gestión de usuarios están agrupadas bajo el módulo "userAuthHandlers", lo que facilita la navegación y organización del código.
 
 - auth.controller.js
@@ -210,7 +210,7 @@ export const registerUser = async (req, res) => {
 
 ```
 
-##Limit Line Length (Limitar la Longitud de Línea): 
+##_Limit Line Length (Limitar la Longitud de Línea)_
 Se ha respetado un límite de longitud de línea en el código. Esto se puede observar en las funciones como loginUser, donde las líneas de código no exceden un número razonable de caracteres, lo que facilita su visualización en editores de código sin desplazamientos horizontales. Limitar la longitud de línea es una práctica importante para mantener el código legible y evita la necesidad de desplazarse constantemente en el editor para entender el código.
 
 - auth.controller.js
@@ -241,7 +241,7 @@ export const loginUser = async (req, res) => {
 
 ```
 
-##Avoid Using Magic Numbers (Evitar el Uso de Números Mágicos): 
+##_Avoid Using Magic Numbers (Evitar el Uso de Números Mágicos)_
 El código evita el uso directo de números literales sin explicación. Por ejemplo, se ha declarado una constante saltRounds con un valor de 10 para definir el número de rondas utilizadas en el proceso de hashing de contraseñas. El uso de esta constante con un nombre descriptivo hace que el código sea más claro y facilita la comprensión de su propósito.
 
 - auth.controller.js
