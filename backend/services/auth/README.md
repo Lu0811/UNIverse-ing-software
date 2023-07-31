@@ -154,4 +154,102 @@ export default AuthToken;
 
 ```
 
+# Laboratorio 10: Codificación Legible (Clean Code)
+##Consistent Indentation (Indentación Coherente): 
+La indentación consistente es una práctica esencial para mejorar la legibilidad del código. En el código presentado, podemos observar que cada nivel de indentación está compuesto por 2 espacios, lo cual es una elección común en la comunidad de desarrollo de JavaScript. Además, el código dentro de bloques de funciones, como en la función registerUser y loginUser, está correctamente indentado para reflejar la estructura jerárquica y mejorar la comprensión del código.
 
+- auth.controller.js
+```javascript
+const hashPassword = async (password) => {
+  const saltRounds = 10;
+  return bcrypt.hash(password, saltRounds);
+};
+
+```
+
+##Comment and Documentation (Comentarios y Documentación): 
+El código está bien documentado con comentarios descriptivos. Cada función tiene comentarios que explican su propósito y su comportamiento. Por ejemplo, la función registerUser tiene un comentario que indica su objetivo, que es registrar un nuevo usuario en la base de datos. También se mencionan los parámetros y el valor de retorno, lo que facilita la comprensión de cómo utilizar la función. La presencia de comentarios y documentación mejora la legibilidad del código y facilita la colaboración entre desarrolladores, ya que otros miembros del equipo pueden entender rápidamente el propósito y el funcionamiento de cada función.
+
+- auth.controller.js
+```javascript
+/**
+ * Función auxiliar para hashear la contraseña.
+ * @function hashPassword
+ * @async
+ * @param {string} password - Contraseña en texto plano.
+ * @returns {string} - Contraseña hasheada.
+ */
+const hashPassword = async (password) => {
+  // Código para hashear la contraseña
+};
+
+```
+
+##Code Grouping (Agrupación de Código): 
+El código está agrupado de manera coherente. Se han definido funciones auxiliares como hashPassword y comparePasswords, que se utilizan para implementar la funcionalidad de hashear y comparar contraseñas. Estas funciones se han colocado en la parte superior del archivo antes de las funciones principales que las utilizan. Además, todas las funciones relacionadas con la gestión de usuarios están agrupadas bajo el módulo "userAuthHandlers", lo que facilita la navegación y organización del código.
+
+- auth.controller.js
+```javascript
+import bcrypt from "bcrypt"; // Library for password hashing
+import User from "../models/User.js";
+
+// ... (Funciones auxiliares hashPassword y comparePasswords) ...
+
+/**
+ * Registra un nuevo usuario en la base de datos.
+ * @function registerUser
+ * @async
+ * @param {Object} req - Objeto de solicitud de Express.
+ * @param {Object} res - Objeto de respuesta de Express.
+ * @returns {Object} - Devuelve el usuario registrado en formato JSON con el código de estado 201 (CREATED).
+ * @throws {Error} - Si ocurre algún error en el servidor.
+ */
+export const registerUser = async (req, res) => {
+  // Código para registrar un nuevo usuario
+};
+
+```
+
+##Limit Line Length (Limitar la Longitud de Línea): 
+Se ha respetado un límite de longitud de línea en el código. Esto se puede observar en las funciones como loginUser, donde las líneas de código no exceden un número razonable de caracteres, lo que facilita su visualización en editores de código sin desplazamientos horizontales. Limitar la longitud de línea es una práctica importante para mantener el código legible y evita la necesidad de desplazarse constantemente en el editor para entender el código.
+
+- auth.controller.js
+```javascript
+export const loginUser = async (req, res) => {
+  const { username, password } = req.body;
+
+  // Buscar el usuario por nombre de usuario o correo electrónico
+  const user = await User.findOne({ $or: [{ username }, { email: username }] });
+
+  if (!user) {
+    return res.status(401).json({ message: "Nombre de usuario o contraseña incorrectos" });
+  }
+
+  const passwordMatch = await comparePasswords(password, user.password);
+
+  if (!passwordMatch) {
+    return res.status(401).json({ message: "Nombre de usuario o contraseña incorrectos" });
+  }
+
+  // Generar y devolver un token de autenticación (por ejemplo, JWT)
+  // Aquí se debe utilizar una biblioteca de manejo de tokens como jsonwebtoken
+
+  const token = generateAuthToken(user._id); // Función que genera el token de autenticación
+
+  res.status(200).json({ token });
+};
+
+```
+
+##Avoid Using Magic Numbers (Evitar el Uso de Números Mágicos): 
+El código evita el uso directo de números literales sin explicación. Por ejemplo, se ha declarado una constante saltRounds con un valor de 10 para definir el número de rondas utilizadas en el proceso de hashing de contraseñas. El uso de esta constante con un nombre descriptivo hace que el código sea más claro y facilita la comprensión de su propósito.
+
+- auth.controller.js
+```javascript
+const saltRounds = 10;
+
+const hashPassword = async (password) => {
+  return bcrypt.hash(password, saltRounds);
+};
+
+```
