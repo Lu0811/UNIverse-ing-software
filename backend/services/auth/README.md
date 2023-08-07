@@ -253,3 +253,131 @@ const hashPassword = async (password) => {
 };
 
 ```
+
+# Laboratorio 11:  Principios SOLID
+
+En este proyecto, hemos aplicado algunos de los principios SOLID para mejorar la estructura y la calidad del código:
+
+### SRP - Principio de Responsabilidad Única
+
+El **Principio de Responsabilidad Única (SRP)** establece que una clase o módulo debe tener una única razón para cambiar. Cada componente debe tener una única responsabilidad y estar enfocado en hacer una sola cosa de manera eficiente. Esto mejora la mantenibilidad, la modularidad y reduce errores.
+
+**Beneficios:**
+
+  **Mantenibilidad**: Al tener una única responsabilidad, el código es más fácil de mantener y entender, ya que cada clase o función se concentra en una tarea específica.
+  **Modularidad:** Las clases y funciones enfocadas en una única responsabilidad son más fáciles de reutilizar en diferentes partes de la aplicación.
+  **Reducción de errores:** La separación de responsabilidades reduce la probabilidad de errores y facilita la detección y corrección de problemas.
+  
+
+En el contexto de una aplicación de red social, el SRP se aplicaría dividiendo el código en módulos separados para la autenticación, la gestión de usuarios, la publicación de mensajes, etc. Cada módulo tendría una única responsabilidad y manejaría sus propias tareas específicas.
+
+En nuestro proyecto, hemos aplicado el SRP al separar las tareas de autenticación y gestión de usuarios en módulos separados.
+
+#### Implementación de SRP
+
+Dentro de `backend/services/auth/controllers/auth.controller.js`,hemos dividido las funciones de autenticación y gestión de usuarios en el controlador de autenticación. Cada función se encarga de una responsabilidad única: `registerUser` para registrar usuarios y `loginUser` para iniciar sesión. Esto mejora la organización y el mantenimiento del código.
+
+- auth.controller.js
+```javascript
+import { PasswordHasher } from "./passwordHasher.js";
+import { UserRepository } from "../repositories/userRepository.js";
+
+export class AuthServiceProvider {
+  constructor() {
+    this.passwordHasher = new PasswordHasher();
+    this.userRepository = new UserRepository();
+  }
+
+  async registerUser(username, email, password) {
+    const existingUser = await this.userRepository.findByUsernameOrEmail(username, email);
+    if (existingUser) {
+      throw new Error("Nombre de usuario o correo electrónico ya registrado");
+    }
+
+    const hashedPassword = await this.passwordHasher.hashPassword(password);
+
+    const newUser = await this.userRepository.create({
+      username,
+      email,
+      password: hashedPassword,
+    });
+
+    return newUser;
+  }
+
+  async loginUser(username, password) {
+    const user = await this.userRepository.findByUsernameOrEmail(username);
+
+    if (!user) {
+      throw new Error("Nombre de usuario o contraseña incorrectos");
+    }
+
+    const passwordMatch = await this.passwordHasher.comparePasswords(password, user.password);
+
+    if (!passwordMatch) {
+      throw new Error("Nombre de usuario o contraseña incorrectos");
+    }
+
+    // Generar y devolver un token de autenticación
+    // ... (Código para generar el token)
+    
+    return token;
+  }
+}
+```
+
+
+
+### DIP - Principio de Inversión de Dependencia
+
+El **Principio de Inversión de Dependencia (DIP)** establece que los módulos de alto nivel no deben depender de los detalles de implementación, sino de abstracciones. Al depender de interfaces o clases abstractas en lugar de implementaciones concretas, se mejora la flexibilidad, las pruebas unitarias y el desacoplamiento.
+
+En nuestro proyecto, hemos utilizado abstracciones para el acceso a la base de datos y el servicio de hashing de contraseñas.
+
+#### Implementación de DIP
+
+Dentro de `backend/services/auth/controllers/auth.controller.js`, hemos creado interfaces o clases abstractas que representen el servicio de hashing de contraseñas y el acceso a la base de datos. Luego, inyecta estas abstracciones en el controlador.
+
+`passwordHasher.js`: Define una interfaz o clase abstracta que representa el servicio de hashing de contraseñas. Implementa esta interfaz con la implementación actual de hashing de contraseñas.
+`userRepository.js`: Define una interfaz o clase abstracta que representa el acceso a la base de datos de usuarios. Implementa esta interfaz con la implementación actual basada en MongoDB.
+
+ Hemos creado dos clases, **PasswordHasher** y **UserRepository**, que representan las abstracciones para el hashing de contraseñas y el acceso a la base de datos de usuarios, respectivamente. Luego, en el controlador auth.controller.js, utilizamos estas abstracciones a través de métodos estáticos en lugar de depender directamente de las implementaciones concretas.
+
+- passwordHasher.js
+```javascript
+// passwordHasher.js
+
+import bcrypt from "bcrypt";
+
+export class PasswordHasher {
+  static async hash(password) {
+    const saltRounds = 10;
+    return bcrypt.hash(password, saltRounds);
+  }
+
+  static async compare(password, hashedPassword) {
+    return bcrypt.compare(password, hashedPassword);
+  }
+}
+
+```
+- userRepository.js
+```javascript
+// passwordHasher.js
+
+
+import User from "../models/User.js";
+
+export class UserRepository {
+  static async findByUsernameOrEmail(username, email) {
+    return User.findOne({ $or: [{ username }, { email }] });
+  }
+
+  static async save(user) {
+    await user.save();
+  }
+
+
+}
+
+```
