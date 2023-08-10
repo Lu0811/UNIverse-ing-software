@@ -1,15 +1,19 @@
 # Plataforma de Red Social Universitaria: UNIverse
 
-## Introducción:
-En un entorno educativo en constante evolución, la adopción de soluciones tecnológicas innovadoras puede desempeñar un papel crucial en la mejora de la experiencia académica y social de los estudiantes universitarios. Presentamos con entusiasmo nuestra ambiciosa iniciativa: una plataforma de red social universitaria meticulosamente diseñada para los miembros de la Universidad Nacional de San Agustín. 
+## Tabla de contenido
+- [Propósito del Proyecto](#Proposito).
+- [Funcionalidades: Diagrama de Casos de Uso y Prototipo](#Funcionalidades).
+- [Modelo de Dominio: Diagrama de Clases y Módulos](#Modelo_de_Dominio).
+- [Arquitectura y Patrones: Diagra de Componentes o Paquetes](#Arquitectura_y_Patrones).
 
 ## Propósito: 
 El propósito fundamental de nuestro proyecto es crear un entorno digital que permita la interacción fluida y efectiva entre los diversos estratos de la comunidad universitaria. Con la aplicación de tecnologías avanzadas, como MongoDB y Node.js en la capa de backend, hemos construido una infraestructura robusta y escalable que se adapta a las demandas de una población activa y en crecimiento. La elección de MongoDB como base de datos no relacional nos proporciona la flexibilidad necesaria para gestionar datos diversos y en constante cambio, mientras que Node.js garantiza la ejecución eficiente de la lógica de negocio y la administración de solicitudes.
 
-## Funcionalidades: Diagrama de Casos de Uso y Prototipo
+## Funcionalidades
 
-## Modelo de Dominio: Diagrama de Clses y Módulos
 
-## Arquitectura y Patrones:Diagrama de Componenetes o Paquetes
+## Modelo de Dominio
+
+## Arquitectura y Patrones
 
 
