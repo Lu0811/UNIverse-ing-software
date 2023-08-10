@@ -11,10 +11,21 @@ El propósito fundamental de nuestro proyecto es crear un entorno digital que pe
 
 ## Funcionalidades
 
+Desde la perspectiva del proyecto, se presenta una red social espec´ıficamente disenada para servir ˜
+a los intereses de los estudiantes universitarios. A traves de sus caracter ´ ´ısticas y funcionalidades, se busca
+proporcionar una experiencia enriquecedora y satisfactoria para sus usuarios.
+
+| Tipo de Usuario   | Formación                           | Actividades                           |
+|-------------------|------------------------------------|---------------------------------------|
+| Administrador     | -                                  | Control y manejo del sistema en general |
+| Desarrollador     | Desarrollador de Software           | Control y manejo del sistema en general |
+| Experto en Informática | Experto en Informática        | Control y manejo del sistema en general |
+
+
 [![Diagrama-de-caso-de-uso.png](https://i.postimg.cc/gjgLmCmh/Diagrama-de-caso-de-uso.png)](https://postimg.cc/V0bkFHSs)
 
 ## Modelo de Dominio
-
+[![Modelo-Dominio.png](https://i.postimg.cc/9QMKmZtw/Modelo-Dominio.png)](https://postimg.cc/WhBXSDys)
 ## Arquitectura y Patrones
 
 
