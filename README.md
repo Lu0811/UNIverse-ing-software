@@ -11,6 +11,7 @@ El propósito fundamental de nuestro proyecto es crear un entorno digital que pe
 
 ## Funcionalidades
 
+[![Diagrama-de-caso-de-uso.png](https://i.postimg.cc/gjgLmCmh/Diagrama-de-caso-de-uso.png)](https://postimg.cc/V0bkFHSs)
 
 ## Modelo de Dominio
 
