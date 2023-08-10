@@ -3,10 +3,10 @@
 ## Tabla de contenido
 - [Propósito del Proyecto](#Proposito).
 - [Funcionalidades: Diagrama de Casos de Uso y Prototipo](#Funcionalidades).
-- [Modelo de Dominio: Diagrama de Clases y Módulos](#Modelo_de_Dominio).
-- [Arquitectura y Patrones: Diagra de Componentes o Paquetes](#Arquitectura_y_Patrones).
+- [Modelo de Dominio: Diagrama de Clases y Módulos](#Modelo-de-Dominio).
+- [Arquitectura y Patrones: Diagra de Componentes o Paquetes](#Arquitectura-y-Patrones).
 
-## Propósito: 
+## Proposito: 
 El propósito fundamental de nuestro proyecto es crear un entorno digital que permita la interacción fluida y efectiva entre los diversos estratos de la comunidad universitaria. Con la aplicación de tecnologías avanzadas, como MongoDB y Node.js en la capa de backend, hemos construido una infraestructura robusta y escalable que se adapta a las demandas de una población activa y en crecimiento. La elección de MongoDB como base de datos no relacional nos proporciona la flexibilidad necesaria para gestionar datos diversos y en constante cambio, mientras que Node.js garantiza la ejecución eficiente de la lógica de negocio y la administración de solicitudes.
 
 ## Funcionalidades
