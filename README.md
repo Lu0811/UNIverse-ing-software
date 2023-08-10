@@ -19,5 +19,5 @@ El propósito fundamental de nuestro proyecto es crear un entorno digital que pe
 
 6. ***Analíticas y Personalización:*** Aprovechamos la potencia de MongoDB para almacenar y analizar datos de usuarios, permitiendo una personalización más profunda y la generación de información valiosa sobre las preferencias y comportamientos de la comunidad.
 
-## Impacto y Visión Futura:***
+## Impacto y Visión Futura:
 Nuestra red social universitaria aspira a trascender la función tradicional de las plataformas de redes sociales, convirtiéndose en un recurso integral para la comunidad académica. Creemos firmemente que esta iniciativa tecnológica no solo mejorará la comunicación y la colaboración, sino que también fortalecerá la identidad de la universidad y enriquecerá la experiencia global del estudiante. Con la expansión prevista de funcionalidades y la continua integración de tecnologías de vanguardia, nuestra visión es que esta plataforma evolucione como un activo fundamental en el ecosistema educativo de la Universidad Nacional de San Agustín y más allá.
