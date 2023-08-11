@@ -55,6 +55,4 @@ Desde la perspectiva del proyecto, se presenta una red social especificamente di
 
 
 
-## Arquitectura y Patrones
-
 
