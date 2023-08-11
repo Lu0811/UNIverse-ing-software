@@ -15,12 +15,15 @@ Desde la perspectiva del proyecto, se presenta una red social especificamente di
 
 [![Diagrama-de-caso-de-uso.png](https://i.postimg.cc/gjgLmCmh/Diagrama-de-caso-de-uso.png)](https://postimg.cc/V0bkFHSs)
 
+
 Figura 1. Diagrama de Casos de Uso
+
 
 | Tipo de Usuario   | Administrador                          | 
 |-------------------|------------------------------------|
 | Formacion     | Desarrollador de Software y Experto en Informatica |
 | Actividades     | Control y manejo del sistema en general |
+
 
 Tabla 1 :Perfil de Administrador
 
@@ -28,6 +31,7 @@ Tabla 1 :Perfil de Administrador
 |-------------------|------------------------------------|
 | Formacion     | Estudiante Universitario de la UNSA |
 | Actividades     | Interactuar con la red social, publicar contenido,interactuar con amigos, buscar informacion, reaccionar a publicaciones, chatear, etc.|
+
 
 Tabla 2 :Perfil de Usuario
 
@@ -49,7 +53,7 @@ Tabla 2 :Perfil de Usuario
 	      - Compatibilidad
 
 ## Modelo de Dominio
-[![Modelo-Dominio.png](https://i.postimg.cc/9QMKmZtw/Modelo-Dominio.png)](https://postimg.cc/WhBXSDys
+[![Modelo-Dominio.png](https://i.postimg.cc/9QMKmZtw/Modelo-Dominio.png)]
 
 Figura 2. Modelo de Dominio y los Subcontextos usando Paquetes UML
 ## Arquitectura y Patrones
