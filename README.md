@@ -24,9 +24,7 @@ proporcionar una experiencia enriquecedora y satisfactoria para sus usuarios.
 | Tipo de Usuario   | Usuario                          | 
 |-------------------|------------------------------------|
 | Formacion     | Estudiante Universitario de la UNSA |
-| Actividades     | Interactuar con la red social, publicar contenido,
-interactuar con amigos, buscar informacion, reac- ´
-cionar a publicaciones, chatear, etc. |
+| Actividades     | Interactuar con la red social, publicar contenido,interactuar con amigos, buscar informacion, reaccionar a publicaciones, chatear, etc. |
 
 [![Diagrama-de-caso-de-uso.png](https://i.postimg.cc/gjgLmCmh/Diagrama-de-caso-de-uso.png)](https://postimg.cc/V0bkFHSs)
 
