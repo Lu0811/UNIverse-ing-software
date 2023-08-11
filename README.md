@@ -16,7 +16,7 @@ Desde la perspectiva del proyecto, se presenta una red social especificamente di
 [![Diagrama-de-caso-de-uso.png](https://i.postimg.cc/gjgLmCmh/Diagrama-de-caso-de-uso.png)](https://postimg.cc/V0bkFHSs)
 
 
-					Figura 1. Diagrama de Casos de Uso
+							Figura 1. Diagrama de Casos de Uso
 
 
 | Tipo de Usuario   | Administrador                          | 
@@ -25,7 +25,7 @@ Desde la perspectiva del proyecto, se presenta una red social especificamente di
 | Actividades     | Control y manejo del sistema en general |
 
 
-Tabla 1 :Perfil de Administrador
+							Tabla 1 :Perfil de Administrador
 
 | Tipo de Usuario   | Usuario                          | 
 |-------------------|------------------------------------|
@@ -33,24 +33,20 @@ Tabla 1 :Perfil de Administrador
 | Actividades     | Interactuar con la red social, publicar contenido,interactuar con amigos, buscar informacion, reaccionar a publicaciones, chatear, etc.|
 
 
-Tabla 2 :Perfil de Usuario
+							Tabla 2 :Perfil de Usuario
 
-**Requisitos_Funcionales**
-        - Iniciar Sesion
-	      - Registrar
-        - Chatear
-	      - Editar Perfil
-        - Publicar
-	      - Navegacion
-        - Cerrar sesion
+
+| Requisitos_Funcionales | Requisitos_Funcionales |
+|------------------------|------------------------|
+|  Iniciar Sesion        |	Escalabilidad     |
+|  Registrar             |	Seguridad         |
+|  Chatear               |	Disponibilidad    |
+|  Editar Perfil         |	Rendimiento       |
+|  Publicar              |	Usabilidad        |
+|  Navegacion            |	Compatibilidad    |
+|  Cerrar sesion         | 			  |
         
-**Requisitos_Funcionales**
-        - Escalabilidad
-	      - Seguridad
-        - Disponibilidad
-	      - Rendimiento
-        - Usabilidad
-	      - Compatibilidad
+
 
 ## Modelo de Dominio
 [![Modelo-Dominio.png](https://i.postimg.cc/9QMKmZtw/Modelo-Dominio.png)]
