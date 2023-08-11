@@ -16,7 +16,7 @@ Desde la perspectiva del proyecto, se presenta una red social especificamente di
 [![Diagrama-de-caso-de-uso.png](https://i.postimg.cc/gjgLmCmh/Diagrama-de-caso-de-uso.png)](https://postimg.cc/V0bkFHSs)
 
 
-Figura 1. Diagrama de Casos de Uso
+					Figura 1. Diagrama de Casos de Uso
 
 
 | Tipo de Usuario   | Administrador                          | 
