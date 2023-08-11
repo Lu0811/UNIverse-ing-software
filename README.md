@@ -7,12 +7,16 @@
 - [Arquitectura y Patrones: Diagra de Componentes o Paquetes](#Arquitectura-y-Patrones).
 
 ## Proposito: 
-El propOsito fundamental de nuestro proyecto es crear un entorno digital que permita la interacciOn fluida y efectiva entre los diversos estratos de la comunidad universitaria. Con la aplicacion de tecnologias avanzadas, como MongoDB y Node.js en la capa de backend, hemos construido una infraestructura robusta y escalable que se adapta a las demandas de una poblacion activa y en crecimiento. La elección de MongoDB como base de datos no relacional nos proporciona la flexibilidad necesaria para gestionar datos diversos y en constante cambio, mientras que Node.js garantiza la ejecucion eficiente de la logica de negocio y la administracion de solicitudes.
+La presente propuesta tiene como objetivo el desarrollo de una plataforma de Red Social que permita a los estudiantes de la Universidad Nacional de San Agust´ın comunicarse mediante mensajerıa, compartir contenido y ampliar sus opciones de interaccion social. Este proyecto busca proporcionar una herramienta eficiente y efectiva para fomentar la conectividad y la participacion activa de los estudiantes en su entorno academico y social.
 
 ## Funcionalidades
 
 Desde la perspectiva del proyecto, se presenta una red social especificamente disenada para servir los intereses de los estudiantes universitarios. A traves de sus caracterısticas y funcionalidades, se busca proporcionar una experiencia enriquecedora y satisfactoria para sus usuarios.
-  
+
+[![Diagrama-de-caso-de-uso.png](https://i.postimg.cc/gjgLmCmh/Diagrama-de-caso-de-uso.png)](https://postimg.cc/V0bkFHSs)
+
+Figura 1. Diagrama de Casos de Uso
+
 | Tipo de Usuario   | Administrador                          | 
 |-------------------|------------------------------------|
 | Formacion     | Desarrollador de Software y Experto en Informatica |
@@ -27,10 +31,27 @@ Tabla 1 :Perfil de Administrador
 
 Tabla 2 :Perfil de Usuario
 
-[![Diagrama-de-caso-de-uso.png](https://i.postimg.cc/gjgLmCmh/Diagrama-de-caso-de-uso.png)](https://postimg.cc/V0bkFHSs)
+**Requisitos_Funcionales**
+        - Iniciar Sesion
+	      - Registrar
+        - Chatear
+	      - Editar Perfil
+        - Publicar
+	      - Navegacion
+        - Cerrar sesion
+        
+**Requisitos_Funcionales**
+        - Escalabilidad
+	      - Seguridad
+        - Disponibilidad
+	      - Rendimiento
+        - Usabilidad
+	      - Compatibilidad
 
 ## Modelo de Dominio
-[![Modelo-Dominio.png](https://i.postimg.cc/9QMKmZtw/Modelo-Dominio.png)](https://postimg.cc/WhBXSDys)
+[![Modelo-Dominio.png](https://i.postimg.cc/9QMKmZtw/Modelo-Dominio.png)](https://postimg.cc/WhBXSDys
+
+Figura 2. Modelo de Dominio y los Subcontextos usando Paquetes UML
 ## Arquitectura y Patrones
 
 
