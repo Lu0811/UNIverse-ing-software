@@ -11,22 +11,21 @@ El propOsito fundamental de nuestro proyecto es crear un entorno digital que per
 
 ## Funcionalidades
 
-Desde la perspectiva del proyecto, se presenta una red social espec´ıficamente disenada para servir ˜
-a los intereses de los estudiantes universitarios. A traves de sus caracter ´ ´ısticas y funcionalidades, se busca
-proporcionar una experiencia enriquecedora y satisfactoria para sus usuarios.
-  <p align="left">
+Desde la perspectiva del proyecto, se presenta una red social especificamente disenada para servir los intereses de los estudiantes universitarios. A traves de sus caracterısticas y funcionalidades, se busca proporcionar una experiencia enriquecedora y satisfactoria para sus usuarios.
+  
 | Tipo de Usuario   | Administrador                          | 
 |-------------------|------------------------------------|
 | Formacion     | Desarrollador de Software y Experto en Informatica |
 | Actividades     | Control y manejo del sistema en general |
-  </p>
 
-  <p align="left">
+Tabla 1 :Perfil de Administrador
+
 | Tipo de Usuario   | Usuario                          | 
 |-------------------|------------------------------------|
 | Formacion     | Estudiante Universitario de la UNSA |
-| Actividades     | Interactuar con la red social, publicar contenido,interactuar con amigos, buscar informacion, reaccionar a publicaciones, chatear, etc. |
-  </p>
+| Actividades     | Interactuar con la red social, publicar contenido,interactuar con amigos, buscar informacion, reaccionar a publicaciones, chatear, etc.|
+
+Tabla 2 :Perfil de Usuario
 
 [![Diagrama-de-caso-de-uso.png](https://i.postimg.cc/gjgLmCmh/Diagrama-de-caso-de-uso.png)](https://postimg.cc/V0bkFHSs)
 
