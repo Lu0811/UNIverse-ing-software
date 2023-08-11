@@ -53,16 +53,16 @@ Desde la perspectiva del proyecto, se presenta una red social especificamente di
 
 		Figura 2. Modelo de Dominio y los Subcontextos usando Paquetes UML
 
-+------------------+       +------------------+
-|    Usuario       |       |    Autenticación  |
-+------------------+       +------------------+
-| id               |       | id               |
-| nombre_usuario   | 1   * | usuario_id       |
-| contraseña       |<------| contraseña_hash  |
-| ...              |       | ...              |
-+------------------+       +------------------+
+### Requisito Funcional: Iniciar Sesión
 
-
++------------------+ +------------------+
+| Usuario | | Autenticación |
++------------------+ +------------------+
+| id | | id |
+| nombre_usuario | 1 * | usuario_id |
+| contraseña |<------| contraseña_hash |
+| ... | | ... |
++------------------+ +------------------+
 
 ## Arquitectura y Patrones
 
